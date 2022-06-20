@@ -1,0 +1,141 @@
+// =====================================================
+//      Theme
+// =====================================================
+
+.page-wrapper {
+    padding: 50px 0;
+    counter-reset: title;
+}
+
+.section {
+    padding-top: 1rem;
+    counter-reset: subtitle;
+
+    + .section {
+        margin-top: 9rem;
+    }
+}
+
+.subsection,
+.subsection__content + .subsection__content {
+    padding-top: 3rem;
+}
+
+.section__title {
+    margin: 0;
+
+    &::before {
+        content: counter(title) '. ';
+        counter-increment: title;
+    }
+}
+
+.subsection__title {
+    &::before {
+        content: counter(title) '.' counter(subtitle) '. ';
+        counter-increment: subtitle;
+    }
+}
+
+.subsection__subtitle {
+    margin-top: 2rem;
+}
+
+// Grid section
+[id='grid'] {
+    .grid + .grid {
+        margin-top: 1rem;
+    }
+
+    [id='columns-order'] {
+        .grid + .grid {
+            margin-top: 2rem;
+        }
+    }
+
+    [class^='col'] {
+        @include mb-down(lg) {
+            width: 100%;
+            margin: 0;
+        }
+
+        + [class^='col']:not(.order-0):not(.order-first),
+        &.order-2 {
+            @include mb-down(lg) {
+                margin-top: 1rem;
+            }
+        }
+
+        span {
+            display: block;
+            padding: 0.75rem 0.125rem;
+            background-color: $gray-300;
+            color: color-contrast($gray-300);
+            border-radius: 0.25rem;
+            text-align: center;
+            font-weight: $font-weight-semi-bold;
+        }
+
+        .grid {
+            margin-top: 1rem;
+        }
+    }
+
+    [class^='col-'] {
+        span {
+            $gradient-1: $primary;
+            $gradient-2: lighten($gradient-1, 10);
+            background-image: linear-gradient(to right, $gradient-2, $gradient-1);
+            color: color-contrast(mix($gradient-2, $gradient-1));
+        }
+    }
+}
+
+// Images section
+[id='images'] {
+    img {
+        max-height: 400px;
+        object-fit: cover;
+    }
+}
+
+// Buttons section
+[id='buttons'] {
+    margin-bottom: -0.5rem;
+
+    .button {
+        margin: 0 0.5rem 0.5rem 0;
+    }
+}
+
+// Colors section
+[id='colors'] {
+    .text-warning {
+        background-color: color-contrast($warning);
+    }
+
+    .text-light {
+        background-color: color-contrast($light);
+    }
+
+    .text-white {
+        background-color: color-contrast($white);
+    }
+
+    [class^='bg'] {
+        display: inline-block;
+        padding: 0.75rem;
+        border-radius: 0.25rem;
+    }
+}
+
+[id='icons'] {
+    .section__content {
+        margin: -1rem;
+    }
+
+    [class^='icon-'] {
+        padding: 1rem;
+        font-size: 2rem;
+    }
+}

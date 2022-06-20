@@ -1,0 +1,52 @@
+// =====================================================
+//      Color contrast
+// =====================================================
+
+@function color-contrast($background, $color-contrast-dark: $dark, $color-contrast-light: $light) {
+    $foregrounds: $color-contrast-light, $color-contrast-dark, $white, $black;
+    $min-contrast-ratio: 4.5;
+    $max-ratio: 0;
+    $max-ratio-color: null;
+
+    @each $foreground in $foregrounds {
+        $contrast-ratio: contrast-ratio($background, $foreground);
+
+        @if $contrast-ratio > $min-contrast-ratio {
+            @return $foreground;
+        } @else if $contrast-ratio > $max-ratio {
+            $max-ratio: $contrast-ratio;
+            $max-ratio-color: $foreground;
+        }
+    }
+
+    @return $max-ratio-color;
+}
+
+@function contrast-ratio($background, $foreground) {
+    $lum1: luminance($background);
+    $lum2: luminance($foreground);
+
+    @return if($lum1 > $lum2, div($lum1 + 0.05, $lum2 + 0.05), div($lum2 + 0.05, $lum1 + 0.05));
+}
+
+@function luminance($color) {
+    $rgb: (
+        'red': div(red($color), 255),
+        'green': div(green($color), 255),
+        'blue': div(blue($color), 255),
+    );
+
+    @each $color, $value in $rgb {
+        $value: if($value < 0.03928, div($value, 12.92), pow(div(($value + 0.055), 1.055), 2.4));
+        $rgb: map-merge(
+            $rgb,
+            (
+                $color: $value,
+            )
+        );
+    }
+
+    $luminance: 0.2126 * map-get($rgb, 'red') + 0.7152 * map-get($rgb, 'green') + 0.0722 * map-get($rgb, 'blue');
+
+    @return $luminance;
+}

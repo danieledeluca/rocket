@@ -1,0 +1,62 @@
+// =====================================================
+//      Cover
+// =====================================================
+
+$cover-padding: 7rem !default;
+$cover-padding-md: 5rem !default;
+$cover-conten-max-width: 600px !default;
+
+.cover {
+    display: block;
+    padding: $cover-padding 0;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include mb-down(md) {
+        padding: $cover-padding-md 0;
+    }
+
+    &[href] {
+        color: $filter-color;
+        text-decoration: none;
+    }
+
+    &.cover--center {
+        text-align: center;
+    }
+
+    &.cover--right {
+        text-align: right;
+    }
+
+    // Parallax
+    &.parallax {
+        background-attachment: fixed;
+    }
+}
+
+.cover__content {
+    padding: 0 $container-gap;
+
+    @include mb-up(md) {
+        max-width: $cover-conten-max-width;
+        padding: 0 0 0 $cover-padding;
+    }
+
+    .cover--center & {
+        margin: 0 auto;
+
+        @include mb-up(md) {
+            padding: 0 div($cover-padding, 2);
+        }
+    }
+
+    .cover--right & {
+        margin-left: auto;
+
+        @include mb-up(md) {
+            padding: 0 $cover-padding 0 0;
+        }
+    }
+}

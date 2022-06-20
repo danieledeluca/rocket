@@ -1,0 +1,87 @@
+// =====================================================
+//      Typography
+// =====================================================
+
+// Font families
+$font-family-sans-serif: 'Inter', sans-serif !default;
+$font-family-serif: 'Playfair Display', serif !default;
+$font-family-monospace: monospace, monospace !default;
+
+// Font size
+$font-size: 1rem !default;
+
+// Font weights
+$font-weight-thin: 100 !default;
+$font-weight-lighter: 200 !default;
+$font-weight-light: 300 !default;
+$font-weight-regular: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semi-bold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: 800 !default;
+$font-weight-black: 900 !default;
+
+// Headings
+$headings-margin-bottom: 0.5em !default;
+$headings-font-family: null !default;
+$headings-font-sizes: (
+    'h1': $font-size * 2.5,
+    'h2': $font-size * 2,
+    'h3': $font-size * 1.75,
+    'h4': $font-size * 1.5,
+    'h5': $font-size * 1.25,
+    'h6': $font-size * 1,
+) !default;
+$headings-font-weight: $font-weight-semi-bold !default;
+$headings-line-height: 1.2 !default;
+
+// Display
+$display-margin-bottom: $headings-margin-bottom !default;
+$display-font-family: $headings-font-family !default;
+$display-font-sizes: (
+    'huge': $font-size * 5,
+    'large': $font-size * 4.5,
+    'bigger': $font-size * 4,
+    'big': $font-size * 3.5,
+) !default;
+$display-font-weight: $headings-font-weight !default;
+$display-line-height: $headings-line-height !default;
+
+// Lead
+$lead-font-family: null !default;
+$lead-font-size: $font-size * 1.25 !default;
+$lead-font-size-md: $font-size * 1.125 !default;
+$lead-font-weight: null !default;
+
+// Inline text elements
+$link-color: $primary !default;
+$link-text-decoration: underline !default;
+$link-hover-color: darken($primary, 5) !default;
+$link-hover-text-decoration: null !default;
+
+$small-font-size: 0.875em !default;
+$strong-font-weight: $font-weight-bold !default;
+
+// Blockquote
+$blockquote-font-size: $lead-font-size !default;
+$blockquote-font-size-md: $lead-font-size-md !default;
+$blockquote-figcaption-color: $gray-600 !default;
+$blockquote-figcaption-font-size: $small-font-size !default;
+
+// Lists
+$list-nested-margin: 0.5rem 0 !default;
+$list-nested-padding-left: 2.5rem !default;
+
+$description-list-title-font-weight: $font-weight-bold !default;
+$description-list-detail-margin-bottom: div($base-margin, 2) !default;
+
+// Hr
+$hr-height: 2px !default;
+$hr-margin: 1.5rem 0 !default;
+$hr-background-color: $gray-300 !default;
+
+// Code
+$code-font-size: $small-font-size !default;
+
+// Sub and Sup
+$sub-sup-font-size: 0.75em !default;

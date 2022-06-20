@@ -1,0 +1,13 @@
+// =====================================================
+//      Math
+// =====================================================
+
+@use 'sass:math';
+
+@function div($dividend, $divisor) {
+    @return math.div($dividend, $divisor);
+}
+
+@function pow($base, $exponent) {
+    @return math.pow($base, $exponent);
+}

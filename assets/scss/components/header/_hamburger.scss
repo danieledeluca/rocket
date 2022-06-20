@@ -1,0 +1,244 @@
+// =====================================================
+//      Hamburger
+// =====================================================
+
+$header-hamburger-layer-width: 22px !default;
+$header-hamburger-layer-height: 3.5px !default;
+$header-hamburger-layer-spacing: 3.5px !default;
+$header-hamburger-layer-color: $base-color !default;
+$header-hamburger-layer-border-radius: $base-border-radius !default;
+
+.header__hamburger {
+    display: flex;
+    align-items: center;
+    padding: $container-gap calc($container-gap + 9px);
+    cursor: pointer;
+
+    @include mb-up(md) {
+        display: none;
+    }
+
+    .hamburger {
+        position: relative;
+        display: inline-block;
+        width: $header-hamburger-layer-width;
+        height: $header-hamburger-layer-height * 3 + $header-hamburger-layer-spacing * 2;
+    }
+
+    &::after {
+        @include transition(opacity, visibility);
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 100%);
+        background: $filter-background-color;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+
+        @include mb-up(md) {
+            display: none;
+        }
+    }
+
+    .nav-open & {
+        &::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.hamburger__inner {
+    top: 50%;
+    display: block;
+    margin-top: div($header-hamburger-layer-height, -2);
+
+    &,
+    &::before,
+    &::after {
+        position: absolute;
+        width: $header-hamburger-layer-width;
+        height: $header-hamburger-layer-height;
+        background-color: $header-hamburger-layer-color;
+        border-radius: $header-hamburger-layer-border-radius;
+        transition: transform 0.15s ease;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+    }
+
+    &::before {
+        top: ($header-hamburger-layer-spacing + $header-hamburger-layer-height) * -1;
+    }
+
+    &::after {
+        bottom: ($header-hamburger-layer-spacing + $header-hamburger-layer-height) * -1;
+    }
+}
+
+// Animations
+// =====================================================
+$transition-timing: cubic-bezier(0.55, 0.055, 0.675, 0.19) !default;
+$active-transition-timing: cubic-bezier(0.215, 0.61, 0.355, 1) !default;
+
+$vortex-transition-timing: cubic-bezier(0.19, 1, 0.22, 1) !default;
+
+$collapse-transition-timing: cubic-bezier(0.33333, 0.66667, 0.66667, 1) !default;
+$collapse-active-transition-timing: cubic-bezier(0.33333, 0, 0.66667, 0.33333) !default;
+
+// Spin
+.hamburger--spin {
+    .hamburger__inner {
+        transition-duration: 0.22s;
+        transition-timing-function: $transition-timing;
+
+        &::before {
+            transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+        }
+
+        &::after {
+            transition: bottom 0.1s 0.25s ease-in, transform 0.22s $transition-timing;
+        }
+
+        .nav-open & {
+            transform: rotate(225deg);
+            transition-delay: 0.12s;
+            transition-timing-function: $active-transition-timing;
+
+            &::before {
+                top: 0;
+                opacity: 0;
+                transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+            }
+
+            &::after {
+                bottom: 0;
+                transform: rotate(-90deg);
+                transition: bottom 0.1s ease-out, transform 0.22s 0.12s $active-transition-timing;
+            }
+        }
+    }
+}
+
+// Vortex
+.hamburger--vortex {
+    .hamburger__inner {
+        transition-duration: 0.2s;
+        transition-timing-function: $vortex-transition-timing;
+
+        &::before,
+        &::after {
+            transition-duration: 0s;
+            transition-delay: 0.1s;
+            transition-timing-function: linear;
+        }
+
+        &::before {
+            transition-property: top, opacity;
+        }
+
+        &::after {
+            transition-property: bottom, transform;
+        }
+
+        .nav-open & {
+            transform: rotate(765deg);
+            transition-timing-function: $vortex-transition-timing;
+
+            &::before,
+            &::after {
+                transition-delay: 0s;
+            }
+
+            &::before {
+                top: 0;
+                opacity: 0;
+            }
+
+            &::after {
+                bottom: 0;
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+
+// Collapse
+.hamburger--collapse {
+    .hamburger__inner {
+        top: auto;
+        bottom: 0;
+        transition-duration: 0.13s;
+        transition-delay: 0.13s;
+        transition-timing-function: $transition-timing;
+
+        &::after {
+            top: ($header-hamburger-layer-spacing * 2 + $header-hamburger-layer-height * 2) * -1;
+            transition: top 0.2s 0.2s $collapse-transition-timing, opacity 0.1s linear;
+        }
+
+        &::before {
+            transition: top 0.12s 0.2s $collapse-transition-timing, transform 0.13s $transition-timing;
+        }
+
+        .nav-open & {
+            transform: translate3d(0, ($header-hamburger-layer-spacing + $header-hamburger-layer-height) * -1, 0)
+                rotate(-45deg);
+            transition-delay: 0.22s;
+            transition-timing-function: $active-transition-timing;
+
+            &::after {
+                top: 0;
+                opacity: 0;
+                transition: top 0.2s $collapse-active-transition-timing, opacity 0.1s 0.22s linear;
+            }
+
+            &::before {
+                top: 0;
+                transform: rotate(-90deg);
+                transition: top 0.1s 0.16s $collapse-active-transition-timing,
+                    transform 0.13s 0.25s $active-transition-timing;
+            }
+        }
+    }
+}
+
+// Squeeze
+.hamburger--squeeze {
+    .hamburger__inner {
+        transition-duration: 0.075s;
+        transition-timing-function: $transition-timing;
+
+        &::before {
+            transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+        }
+
+        &::after {
+            transition: bottom 0.075s 0.12s ease, transform 0.075s $transition-timing;
+        }
+
+        .nav-open & {
+            transform: rotate(45deg);
+            transition-delay: 0.12s;
+            transition-timing-function: $active-transition-timing;
+
+            &::before {
+                top: 0;
+                opacity: 0;
+                transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+            }
+
+            &::after {
+                bottom: 0;
+                transform: rotate(-90deg);
+                transition: bottom 0.075s ease, transform 0.075s 0.12s $active-transition-timing;
+            }
+        }
+    }
+}

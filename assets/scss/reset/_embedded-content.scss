@@ -1,0 +1,29 @@
+// =====================================================
+//      Embedded content
+// =====================================================
+
+// Figure
+figure {
+    @include last-child-no-margin;
+    margin: 0;
+
+    img {
+        margin-bottom: div($base-margin, 2);
+    }
+}
+
+figcaption {
+    color: $figcaption-color;
+    font-size: $figcaption-font-size;
+}
+
+// Images and content
+img,
+svg {
+    vertical-align: middle;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

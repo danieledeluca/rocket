@@ -1,0 +1,51 @@
+// =====================================================
+//      Footer
+// =====================================================
+
+$footer-background-color: $gray-200 !default;
+
+$footer-link-color: $base-color !default;
+$footer-link-text-decoration: none !default;
+$footer-link-hover-color: $link-hover-color !default;
+
+$footer-bottom-border-top: 2px solid $gray-300 !default;
+
+.footer {
+    background-color: $footer-background-color;
+
+    a {
+        color: $footer-link-color;
+        text-decoration: $footer-link-text-decoration;
+
+        &:hover,
+        &:focus {
+            color: $footer-link-hover-color;
+        }
+    }
+}
+
+.footer__navbar,
+.footer__bottom {
+    padding: 1.5rem 0;
+}
+
+.footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mb-up(md) {
+        justify-content: space-between;
+        border-top: $footer-bottom-border-top;
+    }
+
+    @include mb-down(md) {
+        flex-direction: column;
+        padding-top: 0;
+        text-align: center;
+    }
+}
+
+@import 'navbar';
+@import 'copyright';
+@import 'social';

@@ -1,0 +1,16 @@
+// =====================================================
+//      Grouping content
+// =====================================================
+
+// Hr
+//
+// 1. Reset Firefox's gray color
+// 2. Set correct height
+
+hr {
+    height: $hr-height; // 2
+    margin: $hr-margin;
+    background-color: $hr-background-color;
+    color: inherit; // 1
+    border: 0;
+}

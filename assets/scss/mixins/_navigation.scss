@@ -1,0 +1,14 @@
+// =====================================================
+//      Navigation
+// =====================================================
+
+@mixin collapse-animation {
+    @include transition(max-height);
+    max-height: 0;
+    overflow-y: hidden;
+}
+
+@mixin collapse-animation-active($max-height: 50vh) {
+    max-height: $max-height;
+    overflow-y: auto;
+}

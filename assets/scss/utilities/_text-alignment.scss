@@ -1,0 +1,31 @@
+// =====================================================
+//      Text alignment
+// =====================================================
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+@each $breakpoint, $value in $breakpoints {
+    @include mb-up($breakpoint) {
+        .text-#{$breakpoint}-left {
+            text-align: left !important;
+        }
+
+        .text-#{$breakpoint}-center {
+            text-align: center !important;
+        }
+
+        .text-#{$breakpoint}-right {
+            text-align: right !important;
+        }
+    }
+}

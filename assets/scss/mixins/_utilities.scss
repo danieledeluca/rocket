@@ -1,0 +1,28 @@
+// =====================================================
+//      Utilities
+// =====================================================
+
+@mixin last-child-no-margin($margin-bottom: $base-margin) {
+    &:not(:last-child) {
+        margin-bottom: $margin-bottom;
+    }
+}
+
+@mixin reset-link($color: $base-color, $color-hover: $base-color) {
+    color: $color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: $color-hover;
+    }
+}
+
+@mixin reset-list($remove-list-style-type: true) {
+    margin: 0;
+    padding: 0;
+
+    @if $remove-list-style-type {
+        list-style-type: none;
+    }
+}

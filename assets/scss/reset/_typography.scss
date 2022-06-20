@@ -1,0 +1,173 @@
+// =====================================================
+//      Typography
+// =====================================================
+
+// Headings
+//
+// 1. Remove top margins from headings
+
+%heading {
+    margin-top: 0; // 1
+    margin-bottom: $headings-margin-bottom;
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    line-height: $headings-line-height;
+}
+
+@each $heading, $font-size in $headings-font-sizes {
+    #{$heading} {
+        @extend %heading;
+        font-size: $font-size;
+    }
+}
+
+// Paragraphs
+p {
+    @include last-child-no-margin;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+// Links
+a {
+    color: $link-color;
+    text-decoration: $link-text-decoration;
+
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: $link-hover-text-decoration;
+    }
+}
+
+// Storng
+//
+// 1. Add the correct font weight in Chrome, Edge, and Safari
+
+b,
+strong {
+    font-weight: $strong-font-weight; // 1
+}
+
+// Small
+//
+// 1. Add the correct font size in all browsers
+
+small {
+    font-size: $small-font-size; // 1
+}
+
+// Blockquote
+blockquote {
+    @include last-child-no-margin;
+    margin: 0;
+    font-size: $blockquote-font-size;
+
+    @include mb-down(md) {
+        font-size: $blockquote-font-size-md;
+    }
+
+    figcaption {
+        margin: -$base-margin 0 $base-margin;
+        color: $blockquote-figcaption-color;
+        font-size: $blockquote-figcaption-font-size;
+
+        &::before {
+            content: '\2014\00A0';
+        }
+    }
+}
+
+// Lists
+ul,
+ol {
+    @include last-child-no-margin;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-position: inside;
+
+    ul,
+    ol {
+        margin: $list-nested-margin;
+        padding-left: $list-nested-padding-left;
+    }
+
+    nav & {
+        @include reset-list;
+    }
+}
+
+// Description lists
+dt {
+    font-weight: $description-list-title-font-weight;
+}
+
+dd {
+    margin-bottom: $description-list-detail-margin-bottom;
+    margin-left: 0;
+}
+
+// Abbeviations
+//
+// 1. Add the correct text decoration in Chrome, Edge, Opera, and Safari
+// 2. Add explicit cursor to indicate changed behavior
+// 3. Prevent the text-decoration to be skipped
+
+abbr[title] {
+    text-decoration: underline dotted; // 1
+    cursor: help; // 2
+    text-decoration-skip-ink: none; // 3
+}
+
+// Code
+//
+// 1. Correct the inheritance and scaling of font size in all browsers
+// 2. Correct the odd `em` font sizing in all browsers
+
+pre,
+code,
+kbd,
+samp {
+    font-family: $font-family-monospace; // 1
+    font-size: 1em; // 2
+}
+
+// 1. Remove top margins from pre
+// 2. Remove bottom margins from last element
+// 3. Don't allow content to break outside
+
+pre {
+    @include last-child-no-margin; // 2
+    display: block;
+    margin-top: 0; // 1
+    margin-bottom: 0; // 2
+    overflow: auto; // 3
+    font-size: $code-font-size;
+}
+
+// Sub and Sup
+//
+// Prevent `sub` and `sup` elements from affecting the line height in all browsers
+
+sub,
+sup {
+    position: relative;
+    font-size: $sub-sup-font-size;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+// Selection
+::selection {
+    background-color: $primary;
+    color: color-contrast($primary);
+}

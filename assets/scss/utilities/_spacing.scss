@@ -1,0 +1,113 @@
+// =====================================================
+//      Spacing
+// =====================================================
+
+@each $space, $value in $spacers {
+    // Margin
+    .m-#{$space} {
+        margin: $value !important;
+    }
+
+    .mt-#{$space},
+    .my-#{$space} {
+        margin-top: $value !important;
+    }
+
+    .mb-#{$space},
+    .my-#{$space} {
+        margin-bottom: $value !important;
+    }
+
+    .mr-#{$space},
+    .mx-#{$space} {
+        margin-right: $value !important;
+    }
+
+    .ml-#{$space},
+    .mx-#{$space} {
+        margin-left: $value !important;
+    }
+
+    @if $space != auto {
+        // Padding
+        .p-#{$space} {
+            padding: $value !important;
+        }
+
+        .pt-#{$space},
+        .py-#{$space} {
+            padding-top: $value !important;
+        }
+
+        .pb-#{$space},
+        .py-#{$space} {
+            padding-bottom: $value !important;
+        }
+
+        .pr-#{$space},
+        .px-#{$space} {
+            padding-right: $value !important;
+        }
+
+        .pl-#{$space},
+        .px-#{$space} {
+            padding-left: $value !important;
+        }
+    }
+
+    @each $breakpoint, $breakpoint-value in $breakpoints {
+        @include mb-up($breakpoint) {
+            // Margin
+            .m-#{$breakpoint}-#{$space} {
+                margin: $value !important;
+            }
+
+            .mt-#{$breakpoint}-#{$space},
+            .my-#{$breakpoint}-#{$space} {
+                margin-top: $value !important;
+            }
+
+            .mb-#{$breakpoint}-#{$space},
+            .my-#{$breakpoint}-#{$space} {
+                margin-bottom: $value !important;
+            }
+
+            .mr-#{$breakpoint}-#{$space},
+            .mx-#{$breakpoint}-#{$space} {
+                margin-right: $value !important;
+            }
+
+            .ml-#{$breakpoint}-#{$space},
+            .mx-#{$breakpoint}-#{$space} {
+                margin-left: $value !important;
+            }
+
+            @if $space != auto {
+                // Padding
+                .p-#{$breakpoint}-#{$space} {
+                    padding: $value !important;
+                }
+
+                .pt-#{$breakpoint}-#{$space},
+                .py-#{$breakpoint}-#{$space} {
+                    padding-top: $value !important;
+                }
+
+                .pb-#{$breakpoint}-#{$space},
+                .py-#{$breakpoint}-#{$space} {
+                    padding-bottom: $value !important;
+                }
+
+                .pr-#{$breakpoint}-#{$space},
+                .px-#{$breakpoint}-#{$space} {
+                    padding-right: $value !important;
+                }
+
+                .pl-#{$breakpoint}-#{$space},
+                .px-#{$breakpoint}-#{$space} {
+                    padding-left: $value !important;
+                }
+            }
+        }
+    }
+}

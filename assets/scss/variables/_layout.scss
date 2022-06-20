@@ -1,0 +1,19 @@
+// =====================================================
+//      Layout
+// =====================================================
+
+// Breakpoints
+$breakpoints: (
+    'sm': 576px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px,
+) !default;
+$break-offset: 0.02px !default;
+
+// Containers
+$container-max-width: 1320px !default;
+$container-gap: 1rem !default;
+
+// Grid
+$grid-columns: 12 !default;

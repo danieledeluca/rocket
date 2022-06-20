@@ -1,0 +1,36 @@
+// =====================================================
+//      Variables
+// =====================================================
+
+// Base variables
+// =====================================================
+$base-margin: 1em !default;
+$base-border-radius: 0.25rem !default;
+// =====================================================
+
+@import 'colors';
+
+// Color base variables
+// =====================================================
+$base-background-color: $light !default;
+$base-color: $dark !default;
+$base-box-shadow-color: rgba($black, 0.05) !default;
+// =====================================================
+
+@import 'typography';
+
+// Typography base variables
+// =====================================================
+$base-font-family: $font-family-sans-serif !default;
+$base-font-size: $font-size !default;
+$base-font-weight: $font-weight-regular !default;
+$base-line-height: 1.5 !default;
+// =====================================================
+
+@import 'layout';
+@import 'images';
+@import 'tables';
+@import 'buttons';
+@import 'forms';
+@import 'utilities';
+@import 'icons';

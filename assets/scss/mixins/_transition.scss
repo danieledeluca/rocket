@@ -1,0 +1,27 @@
+// =====================================================
+//      Transition
+// =====================================================
+
+@function transition($properties) {
+    $properties-length: length($properties);
+    $transition: '';
+
+    @if $properties-length > 0 {
+        @each $property in $properties {
+            $index: index($properties, $property);
+            $transition: $transition + $property + ' ' + $transition-duration + ' ' + $transition-timimng-function;
+
+            @if $index < $properties-length {
+                $transition: $transition + ', ';
+            }
+        }
+    } @else {
+        $transition: 'all' + ' ' + $transition-duration + ' ' + $transition-timimng-function;
+    }
+
+    @return unquote($transition);
+}
+
+@mixin transition($properties...) {
+    transition: transition($properties);
+}

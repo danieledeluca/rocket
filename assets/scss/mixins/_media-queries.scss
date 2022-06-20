@@ -1,0 +1,38 @@
+// =====================================================
+//      Media queries
+// =====================================================
+
+// Find break
+@function find-break($break) {
+    $breakpoint: if(map-get($breakpoints, $break), map-get($breakpoints, $break), $break);
+
+    @return $breakpoint;
+}
+
+// Min width
+@mixin mb-up($break) {
+    $min: find-break($break);
+
+    @media (min-width: $min) {
+        @content;
+    }
+}
+
+// Max width
+@mixin mb-down($break) {
+    $max: (find-break($break) - $break-offset);
+
+    @media (max-width: $max) {
+        @content;
+    }
+}
+
+// Min width and max width
+@mixin mb-between($lower-break, $upper-break) {
+    $min: find-break($lower-break);
+    $max: (find-break($break) - $break-offset);
+
+    @media (min-width: $min) and (max-width: $max) {
+        @content;
+    }
+}

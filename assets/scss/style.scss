@@ -1,0 +1,21 @@
+// =====================================================
+//      Style
+// =====================================================
+
+// Vendor
+@import '@splidejs/splide/src/css/themes/default/index.scss';
+
+// Core
+@import 'functions/functions';
+@import 'variables/variables';
+@import 'fonts/fonts';
+@import 'mixins/mixins';
+@import 'reset/reset';
+@import 'layout/layout';
+@import 'typography/typography';
+@import 'contet/content';
+@import 'utilities/utilities';
+@import 'components/components';
+
+// Theme
+@import 'theme/theme';

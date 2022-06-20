@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <title>Rocket</title>
+        <!-- Favicon -->
+        <link rel="icon" href="./assets/images/logo/favicon.ico">
+        <!-- Google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+              rel="stylesheet">
+        <!-- Style -->
+        <link rel="stylesheet" href="./assets/css/style.min.css">
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <!-- Header logo -->
+                    <a href="index.html" class="header__logo">
+                        <img src="./assets/images/logo/logo.svg" alt="Rocket Framework" class="logo">
+                    </a>
+                    <!-- Header navbar -->
+                    <nav class="header__navbar header__navbar--collapse">
+                        <ul class="navbar lv0">
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#" class="navbar__link lv0">
+                                    <span>Grid</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#columns-size" class="navbar__link lv1">
+                                            <span>Columns size</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#columns-responsiveness" class="navbar__link lv1">
+                                            <span>Columns responsiveness</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#columns-order" class="navbar__link lv1">
+                                            <span>Columns order</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#columns-offset" class="navbar__link lv1">
+                                            <span>Columns offset</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#nesting-columns" class="navbar__link lv1">
+                                            <span>Nesting columns</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#" class="navbar__link lv0">
+                                    <span>Typography</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#headings" class="navbar__link lv1">
+                                            <span>Headings</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#display" class="navbar__link lv1">
+                                            <span>Display</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#lead" class="navbar__link lv1">
+                                            <span>Lead</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#inline-text-elements" class="navbar__link lv1">
+                                            <span>Inline text elements</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#blockquotes" class="navbar__link lv1">
+                                            <span>Blockquotes</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#lists" class="navbar__link lv1">
+                                            <span>Lists</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#" class="navbar__link lv0">
+                                    <span>Content</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#images" class="navbar__link lv1">
+                                            <span>Images</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#tables" class="navbar__link lv1">
+                                            <span>Tables</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#buttons" class="navbar__link lv1">
+                                            <span>Buttons</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#forms" class="navbar__link lv1">
+                                            <span>Forms</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#" class="navbar__link lv0">
+                                    <span>Components</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#pagination" class="navbar__link lv1">
+                                            <span>Pagination</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#breadcrumb" class="navbar__link lv1">
+                                            <span>Breadcrumb</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#card" class="navbar__link lv1">
+                                            <span>Card</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#cover" class="navbar__link lv1">
+                                            <span>Cover</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#slider" class="navbar__link lv1">
+                                            <span>Slider</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#" class="navbar__link lv0">
+                                    <span>Utilities</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#colors" class="navbar__link lv1">
+                                            <span>Colors</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#text-alignment" class="navbar__link lv1">
+                                            <span>Text alignment</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#spacing" class="navbar__link lv1">
+                                            <span>Spacing</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0">
+                                <a href="#icons" class="navbar__link lv0">
+                                    <span>Icons</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Header hamburger -->
+                    <div class="header__hamburger">
+                        <div class="hamburger hamburger--vortex">
+                            <span class="hamburger__inner"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Page wrapper -->
+        <div class="page-wrapper">
+            <main class="main">
+                <!-- Grid -->
+                <section id="grid" class="section">
+                    <div class="container">
+                        <h2 class="section__title">Grid</h2>
+                        <!-- Columns size -->
+                        <div id="columns-size" class="subsection">
+                            <h3 class="subsection__title">Columns size</h3>
+                            <div class="subsection__content">
+                                <div class="grid">
+                                    <div class="col-12">
+                                        <span>col-12</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-11">
+                                        <span>col-11</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-10">
+                                        <span>col-10</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-9">
+                                        <span>col-9</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-8">
+                                        <span>col-8</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-7">
+                                        <span>col-7</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-6">
+                                        <span>col-6</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-5">
+                                        <span>col-5</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-4">
+                                        <span>col-4</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-3">
+                                        <span>col-3</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-2">
+                                        <span>col-2</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-1">
+                                        <span>col-1</span>
+                                    </div>
+                                    <div class="col">
+                                        <span>Auto</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Columns responsiveness -->
+                        <div id="columns-responsiveness" class="subsection">
+                            <h3 class="subsection__title">Columns responsiveness</h3>
+                            <div class="subsection__content">
+                                <div class="grid">
+                                    <div class="col-8 col-xl-3">
+                                        <span>col-8 col-xl-3</span>
+                                    </div>
+                                    <div class="col-4 col-xl-9">
+                                        <span>col-4 col-xl-9</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Columns order -->
+                        <div id="columns-order" class="subsection">
+                            <h3 class="subsection__title">Columns order</h3>
+                            <div class="subsection__content">
+                                <div class="grid">
+                                    <div class="col-4 order-2">
+                                        <span>First in DOM</span>
+                                    </div>
+                                    <div class="col-4 order-0">
+                                        <span>Second in DOM</span>
+                                    </div>
+                                    <div class="col-4 order-1">
+                                        <span>Third in DOM</span>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="col-4 order-2">
+                                        <span>First in DOM</span>
+                                    </div>
+                                    <div class="col-4 order-last">
+                                        <span>Second in DOM</span>
+                                    </div>
+                                    <div class="col-4 order-first">
+                                        <span>Third in DOM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Columns offset -->
+                        <div id="columns-offset" class="subsection">
+                            <h3 class="subsection__title">Columns offset</h3>
+                            <div class="subsection__content">
+                                <div class="grid">
+                                    <div class="col-4 offset-1">
+                                        <span>col-4 offset-1</span>
+                                    </div>
+                                    <div class="col-4 offset-3">
+                                        <span>col-4 offset-3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Nesting columns -->
+                        <div id="nesting-columns" class="subsection">
+                            <h3 class="subsection__title">Nesting columns</h3>
+                            <div class="subsection__content">
+                                <div class="grid">
+                                    <div class="col-3">
+                                        <span>col-3</span>
+                                    </div>
+                                    <div class="col-9">
+                                        <span>col-9</span>
+                                        <div class="grid">
+                                            <div class="col-4">
+                                                <span>col-4</span>
+                                            </div>
+                                            <div class="col-8">
+                                                <span>col-8</span>
+                                                <div class="grid">
+                                                    <div class="col-6">
+                                                        <span>col-6</span>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <span>col-6</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Typography -->
+                <section id="typography" class="section">
+                    <div class="container">
+                        <h2 class="section__title">Typography</h2>
+                        <!-- Headings -->
+                        <div id="headings" class="subsection">
+                            <h3 class="subsection__title">Headings</h3>
+                            <div class="subsection__content">
+                                <h1>Heading h1</h1>
+                                <h2>Heading h2</h2>
+                                <h3>Heading h3</h3>
+                                <h4>Heading h4</h4>
+                                <h5>Heading h5</h5>
+                                <h6>Heading h6</h6>
+                            </div>
+                        </div>
+                        <!-- Display -->
+                        <div id="display" class="subsection">
+                            <h3 class="subsection__title">Display</h3>
+                            <div class="subsection__content">
+                                <h1 class="huge">Display huge</h1>
+                                <h1 class="large">Display large</h1>
+                                <h1 class="bigger">Display bigger</h1>
+                                <h1 class="big">Display big</h1>
+                            </div>
+                        </div>
+                        <!-- Lead -->
+                        <div id="lead" class="subsection">
+                            <h3 class="subsection__title">Lead</h3>
+                            <div class="subsection__content">
+                                <p class="lead"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                                    officiis? </p>
+                            </div>
+                        </div>
+                        <!-- Inline text elements -->
+                        <div id="inline-text-elements" class="subsection">
+                            <h3 class="subsection__title">Inline text elements</h3>
+                            <div class="subsection__content">
+                                <p>
+                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                                        officiis?</span>
+                                </p>
+                                <p>
+                                    <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                                        officiis?</small>
+                                </p>
+                                <p>
+                                    <em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                                        officiis?</em>
+                                </p>
+                                <p>
+                                    <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                                        officiis?</strong>
+                                </p>
+                                <p>
+                                    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                                        officiis?</a>
+                                </p>
+                                <hr>
+                            </div>
+                        </div>
+                        <!-- Blockquotes -->
+                        <div id="blockquotes" class="subsection">
+                            <h3 class="subsection__title">Blockquotes</h3>
+                            <div class="subsection__content">
+                                <blockquote>
+                                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officiis?
+                                    </p>
+                                </blockquote>
+                                <figure>
+                                    <blockquote>
+                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                                            officiis? </p>
+                                        <figcaption> Lorem ipsum dolor <cite>sit amet.</cite></figcaption>
+                                    </blockquote>
+                                </figure>
+                            </div>
+                        </div>
+                        <!-- Lists -->
+                        <div id="lists" class="subsection">
+                            <h3 class="subsection__title">Lists</h3>
+                            <div class="subsection__content">
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li> Lorem ipsum dolor sit amet. <ul>
+                                            <li>Lorem ipsum dolor sit amet.</li>
+                                            <li>Lorem ipsum dolor sit amet.</li>
+                                            <li>Lorem ipsum dolor sit amet.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                </ul>
+                                <ol>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                    <li>Lorem ipsum dolor sit amet.</li>
+                                </ol>
+                            </div>
+                            <h5 class="subsection__subtitle">Description list</h5>
+                            <div class="subsection__content">
+                                <dl>
+                                    <dt>Lorem ipsum dolor sit amet.</dt>
+                                    <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit.</dd>
+                                    <dt>Lorem ipsum dolor sit amet consectetur.</dt>
+                                    <dd>Lorem ipsum dolor sit.</dd>
+                                    <dt>Lorem ipsum dolor sit, amet consectetur adipisicing.</dt>
+                                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, qui!</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Content -->
+                <section id="content" class="section">
+                    <div class="container">
+                        <h2 class="section__title">Content</h2>
+                        <!-- Images -->
+                        <div id="images" class="subsection">
+                            <h3 class="subsection__title">Images</h3>
+                            <div class="subsection__content">
+                                <img src="./assets/images/background.jpg" alt="Image" class="img--full">
+                            </div>
+                            <h5 class="subsection__subtitle">Images with caption</h5>
+                            <div class="subsection__content">
+                                <figure>
+                                    <img src="./assets/images/background.jpg" alt="Image" class="img--full">
+                                    <figcaption> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore natus
+                                        similique aperiam inventore. Amet tempora optio totam nemo vitae deserunt!
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <!-- Tables -->
+                        <div id="tables" class="subsection">
+                            <h3 class="subsection__title">Tables</h3>
+                            <div class="subsection__content">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Company</th>
+                                            <th>Contact</th>
+                                            <th>Country</th>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td data-th="Company">Alfreds Futterkiste</td>
+                                        <td data-th="Contact">Maria Anders</td>
+                                        <td data-th="Country">Germany</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Centro comercial Moctezuma</td>
+                                        <td data-th="Contact">Francisco Chang</td>
+                                        <td data-th="Country">Mexico</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Ernst Handel</td>
+                                        <td data-th="Contact">Roland Mendel</td>
+                                        <td data-th="Country">Austria</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Island Trading</td>
+                                        <td data-th="Contact">Helen Bennett</td>
+                                        <td data-th="Country">UK</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Laughing Bacchus Winecellars</td>
+                                        <td data-th="Contact">Yoshi Tannamuri</td>
+                                        <td data-th="Country">Canada</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Magazzini Alimentari Riuniti</td>
+                                        <td data-th="Contact">Giovanni Rovelli</td>
+                                        <td data-th="Country">Italy</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h5 class="subsection__subtitle">Tables with footer</h5>
+                            <div class="subsection__content">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Company</th>
+                                            <th>Contact</th>
+                                            <th>Country</th>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td data-th="Company">Alfreds Futterkiste</td>
+                                        <td data-th="Contact">Maria Anders</td>
+                                        <td data-th="Country">Germany</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Centro comercial Moctezuma</td>
+                                        <td data-th="Contact">Francisco Chang</td>
+                                        <td data-th="Country">Mexico</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Ernst Handel</td>
+                                        <td data-th="Contact">Roland Mendel</td>
+                                        <td data-th="Country">Austria</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Island Trading</td>
+                                        <td data-th="Contact">Helen Bennett</td>
+                                        <td data-th="Country">UK</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Laughing Bacchus Winecellars</td>
+                                        <td data-th="Contact">Yoshi Tannamuri</td>
+                                        <td data-th="Country">Canada</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Magazzini Alimentari Riuniti</td>
+                                        <td data-th="Contact">Giovanni Rovelli</td>
+                                        <td data-th="Country">Italy</td>
+                                    </tr>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Company</th>
+                                            <th>Contact</th>
+                                            <th>Country</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <h5 class="subsection__subtitle">Tables with caption</h5>
+                            <div class="subsection__content">
+                                <table>
+                                    <caption>List of company</caption>
+                                    <thead>
+                                        <tr>
+                                            <th>Company</th>
+                                            <th>Contact</th>
+                                            <th>Country</th>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td data-th="Company">Alfreds Futterkiste</td>
+                                        <td data-th="Contact">Maria Anders</td>
+                                        <td data-th="Country">Germany</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Centro comercial Moctezuma</td>
+                                        <td data-th="Contact">Francisco Chang</td>
+                                        <td data-th="Country">Mexico</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Ernst Handel</td>
+                                        <td data-th="Contact">Roland Mendel</td>
+                                        <td data-th="Country">Austria</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Island Trading</td>
+                                        <td data-th="Contact">Helen Bennett</td>
+                                        <td data-th="Country">UK</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Laughing Bacchus Winecellars</td>
+                                        <td data-th="Contact">Yoshi Tannamuri</td>
+                                        <td data-th="Country">Canada</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Magazzini Alimentari Riuniti</td>
+                                        <td data-th="Contact">Giovanni Rovelli</td>
+                                        <td data-th="Country">Italy</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h5 class="subsection__subtitle">Tables stripped</h5>
+                            <div class="subsection__content">
+                                <table class="table--stripped">
+                                    <thead>
+                                        <tr>
+                                            <th>Company</th>
+                                            <th>Contact</th>
+                                            <th>Country</th>
+                                        </tr>
+                                    </thead>
+                                    <tr>
+                                        <td data-th="Company">Alfreds Futterkiste</td>
+                                        <td data-th="Contact">Maria Anders</td>
+                                        <td data-th="Country">Germany</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Centro comercial Moctezuma</td>
+                                        <td data-th="Contact">Francisco Chang</td>
+                                        <td data-th="Country">Mexico</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Ernst Handel</td>
+                                        <td data-th="Contact">Roland Mendel</td>
+                                        <td data-th="Country">Austria</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Island Trading</td>
+                                        <td data-th="Contact">Helen Bennett</td>
+                                        <td data-th="Country">UK</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Laughing Bacchus Winecellars</td>
+                                        <td data-th="Contact">Yoshi Tannamuri</td>
+                                        <td data-th="Country">Canada</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-th="Company">Magazzini Alimentari Riuniti</td>
+                                        <td data-th="Contact">Giovanni Rovelli</td>
+                                        <td data-th="Country">Italy</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Buttons -->
+                        <div id="buttons" class="subsection">
+                            <h3 class="subsection__title">Buttons</h3>
+                            <h5 class="subsection__subtitle">Buttons primary</h5>
+                            <div class="subsection__content">
+                                <a href="#" class="button button--primary primary">
+                                    <span>Primary</span>
+                                </a>
+                                <a href="#" class="button button--primary success">
+                                    <span>Success</span>
+                                </a>
+                                <a href="#" class="button button--primary warning">
+                                    <span>Warning</span>
+                                </a>
+                                <a href="#" class="button button--primary danger">
+                                    <span>Danger</span>
+                                </a>
+                                <a href="#" class="button button--primary info">
+                                    <span>Info</span>
+                                </a>
+                                <a href="#" class="button button--primary light">
+                                    <span>Light</span>
+                                </a>
+                                <a href="#" class="button button--primary dark">
+                                    <span>Dark</span>
+                                </a>
+                                <a href="#" class="button button--primary white">
+                                    <span>White</span>
+                                </a>
+                                <a href="#" class="button button--primary black">
+                                    <span>Black</span>
+                                </a>
+                            </div>
+                            <h5 class="subsection__subtitle">Buttons secondary</h5>
+                            <div class="subsection__content">
+                                <a href="#" class="button button--secondary primary">
+                                    <span>Primary</span>
+                                </a>
+                                <a href="#" class="button button--secondary success">
+                                    <span>Success</span>
+                                </a>
+                                <a href="#" class="button button--secondary warning">
+                                    <span>Warning</span>
+                                </a>
+                                <a href="#" class="button button--secondary danger">
+                                    <span>Danger</span>
+                                </a>
+                                <a href="#" class="button button--secondary info">
+                                    <span>Info</span>
+                                </a>
+                                <a href="#" class="button button--secondary light">
+                                    <span>Light</span>
+                                </a>
+                                <a href="#" class="button button--secondary dark">
+                                    <span>Dark</span>
+                                </a>
+                                <a href="#" class="button button--secondary white">
+                                    <span>White</span>
+                                </a>
+                                <a href="#" class="button button--secondary black">
+                                    <span>Black</span>
+                                </a>
+                            </div>
+                            <h5 class="subsection__subtitle">Buttons tertiary</h5>
+                            <div class="subsection__content">
+                                <a href="#" class="button button--tertiary primary">
+                                    <span>Primary</span>
+                                </a>
+                                <a href="#" class="button button--tertiary success">
+                                    <span>Success</span>
+                                </a>
+                                <a href="#" class="button button--tertiary warning">
+                                    <span>Warning</span>
+                                </a>
+                                <a href="#" class="button button--tertiary danger">
+                                    <span>Danger</span>
+                                </a>
+                                <a href="#" class="button button--tertiary info">
+                                    <span>Info</span>
+                                </a>
+                                <a href="#" class="button button--tertiary light">
+                                    <span>Light</span>
+                                </a>
+                                <a href="#" class="button button--tertiary dark">
+                                    <span>Dark</span>
+                                </a>
+                                <a href="#" class="button button--tertiary white">
+                                    <span>White</span>
+                                </a>
+                                <a href="#" class="button button--tertiary black">
+                                    <span>Black</span>
+                                </a>
+                            </div>
+                            <h5 class="subsection__subtitle">Buttons icon</h5>
+                            <div class="subsection__content">
+                                <a href="#" class="button button--primary primary">
+                                    <i class="icon-corner-down-right"></i>
+                                    <span>Primary</span>
+                                </a>
+                                <a href="#" class="button button--primary success">
+                                    <i class="icon-shopping-cart"></i>
+                                    <span>Success</span>
+                                </a>
+                                <a href="#" class="button button--primary warning">
+                                    <i class="icon-alert-triangle"></i>
+                                    <span>Warning</span>
+                                </a>
+                                <a href="#" class="button button--secondary danger">
+                                    <i class="icon-x"></i>
+                                    <span>Danger</span>
+                                </a>
+                                <a href="#" class="button button--secondary info">
+                                    <i class="icon-info"></i>
+                                    <span>Info</span>
+                                </a>
+                                <a href="#" class="button button--secondary light">
+                                    <i class="icon-star"></i>
+                                    <span>Light</span>
+                                </a>
+                                <a href="#" class="button button--tertiary dark">
+                                    <i class="icon-award"></i>
+                                    <span>Dark</span>
+                                </a>
+                                <a href="#" class="button button--tertiary white">
+                                    <i class="icon-check"></i>
+                                    <span>White</span>
+                                </a>
+                                <a href="#" class="button button--tertiary black">
+                                    <i class="icon-compass"></i>
+                                    <span>Black</span>
+                                </a>
+                            </div>
+                            <h5 class="subsection__subtitle">Buttons icon only</h5>
+                            <div class="subsection__content">
+                                <a href="#" class="button button--primary button--icon primary">
+                                    <i class="icon-corner-down-right"></i>
+                                </a>
+                                <a href="#" class="button button--primary button--icon success">
+                                    <i class="icon-shopping-cart"></i>
+                                </a>
+                                <a href="#" class="button button--primary button--icon warning">
+                                    <i class="icon-alert-triangle"></i>
+                                </a>
+                                <a href="#" class="button button--secondary button--icon danger">
+                                    <i class="icon-x"></i>
+                                </a>
+                                <a href="#" class="button button--secondary button--icon info">
+                                    <i class="icon-info"></i>
+                                </a>
+                                <a href="#" class="button button--secondary button--icon light">
+                                    <i class="icon-star"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Forms -->
+                        <div id="forms" class="subsection">
+                            <h3 class="subsection__title">Forms</h3>
+                            <div class="subsection__content">
+                                <form>
+                                    <fieldset>
+                                        <legend>Example fieldset</legend>
+                                        <div class="form__field is-required">
+                                            <label for="example-text">Example text</label>
+                                            <input type="text" id="example-text" required>
+                                        </div>
+                                        <div class="form__field">
+                                            <label for="example-password">Example password</label>
+                                            <input type="password" id="example-password">
+                                        </div>
+                                        <div class="form__field">
+                                            <label for="example-textarea">Example textarea</label>
+                                            <textarea id="example-textarea" rows="3"></textarea>
+                                        </div>
+                                        <div class="form__field">
+                                            <label for="example-select">Example select</label>
+                                            <select id="example-select">
+                                                <option selected>Please choose an option</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="form__field">
+                                            <input type="checkbox" id="example-checkbox">
+                                            <label for="example-checkbox">Example checkbox</label>
+                                        </div>
+                                        <div class="form__field">
+                                            <input type="checkbox" id="example-checkbox-checked" checked>
+                                            <label for="example-checkbox-checked">Example checkbox checked</label>
+                                        </div>
+                                        <div class="form__field">
+                                            <input type="radio" name="example-radio" id="example-radio">
+                                            <label for="example-radio">Example radio</label>
+                                        </div>
+                                        <div class="form__field">
+                                            <input type="radio" name="example-radio" id="example-radio-checked" checked>
+                                            <label for="example-radio-checked">Example radio checked</label>
+                                        </div>
+                                        <div class="form__field">
+                                            <button type="submit" class="button button--primary primary">Example
+                                                button</button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <h5 class="subsection__subtitle">Forms disabled</h5>
+                            <div class="subsection__content">
+                                <form>
+                                    <div class="form__field">
+                                        <label for="example-text-disabled">Example text disabled</label>
+                                        <input type="text" id="example-text-disabled" disabled>
+                                    </div>
+                                    <div class="form__field">
+                                        <label for="example-select-disabled">Example select disabled</label>
+                                        <select id="example-select-disabled" disabled>
+                                            <option selected>Please choose an option</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="form__field">
+                                        <input type="checkbox" id="example-checkbox-disabled" disabled>
+                                        <label for="example-checkbox-disabled">Example checkbox disabled</label>
+                                    </div>
+                                    <div class="form__field">
+                                        <input type="radio" id="example-radio-disabled" disabled>
+                                        <label for="example-radio-disabled">Example radio disabled</label>
+                                    </div>
+                                    <button type="submit" class="button button--primary primary" disabled>Example button
+                                        disabled</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Components -->
+                <section id="components" class="section">
+                    <div class="container">
+                        <h2 class="section__title">Components</h2>
+                        <!-- Pagination -->
+                        <div id="pagination" class="subsection">
+                            <h3 class="subsection__title">Pagination</h3>
+                            <div class="subsection__content">
+                                <nav class="pagination">
+                                    <ul class="pagination__list">
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link pagination__link--prev">
+                                                <i class="icon-chevron-left"></i>
+                                            </a>
+                                        </li>
+                                        <li class="pagination__item is-active">
+                                            <span class="pagination__link">1</span>
+                                        </li>
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">2</a>
+                                        </li>
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">3</a>
+                                        </li>
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link">4</a>
+                                        </li>
+                                        <li class="pagination__item">
+                                            <a href="#" class="pagination__link pagination__link--next">
+                                                <i class="icon-chevron-right"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- Breadcrumb -->
+                        <div id="breadcrumb" class="subsection">
+                            <h3 class="subsection__title">Breadcrumb</h3>
+                            <div class="subsection__content">
+                                <nav class="breadcrumb">
+                                    <ul class="breadcrumb__list">
+                                        <li class="breadcrumb__item">
+                                            <a href="#" class="breadcrumb__link">
+                                                <span>Home</span>
+                                            </a>
+                                        </li>
+                                        <li class="breadcrumb__item">
+                                            <a href="#" class="breadcrumb__link">
+                                                <span>Category</span>
+                                            </a>
+                                        </li>
+                                        <li class="breadcrumb__item">
+                                            <a href="#" class="breadcrumb__link">
+                                                <span>Sub category</span>
+                                            </a>
+                                        </li>
+                                        <li class="breadcrumb__item is-active">
+                                            <span class="breadcrumb__link">Product</span>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                        <div id="card" class="subsection">
+                            <h3 class="subsection__title">Card</h3>
+                            <h5 class="subsection__subtitle">Card only text</h5>
+                            <div class="subsection__content">
+                                <div class="grid">
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                            <div class="card__body">
+                                                <h3 class="card__title">Lorem ipsum</h3>
+                                                <p class="card__text"> Lorem, ipsum dolor sit amet consectetur
+                                                    adipisicing elit. Consequatur porro ullam quidem tenetur quae
+                                                    cupiditate libero impedit blanditiis, itaque ipsa. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <a href="#" class="card">
+                                            <div class="card__body">
+                                                <h3 class="card__title">Lorem ipsum </h3>
+                                                <p class="card__text"> Lorem, ipsum dolor sit amet consectetur
+                                                    adipisicing elit. Consequatur porro ullam quidem tenetur quae
+                                                    cupiditate libero impedit blanditiis, itaque ipsa. </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                            <div class="card__body">
+                                                <h3 class="card__title">
+                                                    <a href="#">Lorem ipsum</a>
+                                                </h3>
+                                                <p class="card__text"> Lorem, ipsum dolor sit amet consectetur
+                                                    adipisicing elit. Consequatur porro ullam quidem tenetur quae
+                                                    cupiditate libero impedit blanditiis, itaque ipsa. </p>
+                                                <a href="#" class="button button--primary primary">Button</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="subsection__subtitle">Card text and image</h5>
+                            <div class="subsection__content">
+                                <div class="grid">
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                            <div class="card__image">
+                                                <img src="./assets/images/background.jpg" alt="Card Image">
+                                            </div>
+                                            <div class="card__body">
+                                                <h3 class="card__title">Lorem ipsum</h3>
+                                                <p class="card__text"> Lorem, ipsum dolor sit amet consectetur
+                                                    adipisicing elit. Consequatur porro ullam quidem tenetur quae
+                                                    cupiditate libero impedit blanditiis, itaque ipsa. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <a href="#" class="card">
+                                            <span class="card__image">
+                                                <img src="./assets/images/background.jpg" alt="Card Image">
+                                            </span>
+                                            <div class="card__body">
+                                                <h3 class="card__title">Lorem ipsum</h3>
+                                                <p class="card__text"> Lorem, ipsum dolor sit amet consectetur
+                                                    adipisicing elit. Consequatur porro ullam quidem tenetur quae
+                                                    cupiditate libero impedit blanditiis, itaque ipsa. </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card">
+                                            <a href="#" class="card__image">
+                                                <img src="./assets/images/background.jpg" alt="Card Image">
+                                            </a>
+                                            <div class="card__body">
+                                                <h3 class="card__title">
+                                                    <a href="#">Lorem ipsum</a>
+                                                </h3>
+                                                <p class="card__text"> Lorem, ipsum dolor sit amet consectetur
+                                                    adipisicing elit. Consequatur porro ullam quidem tenetur quae
+                                                    cupiditate libero impedit blanditiis, itaque ipsa. </p>
+                                                <a href="#" class="button button--primary primary">Button</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cover -->
+                        <div id="cover" class="subsection">
+                            <h3 class="subsection__title">Cover</h3>
+                            <div class="subsection__content">
+                                <div class="cover filter" style="background-image: url(./assets/images/background.jpg)">
+                                    <div class="cover__content">
+                                        <h1 class="cover__title">Lorem ipsum</h1>
+                                        <p class="cover__text lead"> Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Impedit minus eum voluptatem, corporis neque accusantium? </p>
+                                        <a href="#" class="button button--primary primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="subsection__subtitle">Cover center</h5>
+                            <div class="subsection__content">
+                                <div class="cover cover--center filter"
+                                     style="background-image: url(./assets/images/background.jpg)">
+                                    <div class="cover__content">
+                                        <h1 class="cover__title">Lorem ipsum</h1>
+                                        <p class="cover__text lead"> Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Impedit minus eum voluptatem, corporis neque accusantium? </p>
+                                        <a href="#" class="button button--primary primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="subsection__subtitle">Cover right</h5>
+                            <div class="subsection__content">
+                                <div class="cover cover--right filter"
+                                     style="background-image: url(./assets/images/background.jpg)">
+                                    <div class="cover__content">
+                                        <h1 class="cover__title">Lorem ipsum</h1>
+                                        <p class="cover__text lead"> Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Impedit minus eum voluptatem, corporis neque accusantium? </p>
+                                        <a href="#" class="button button--primary primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5 class="subsection__subtitle">Cover parallax</h5>
+                            <div class="subsection__content">
+                                <div class="cover parallax filter" data-scroll-speed="2"
+                                     style="background-image: url(./assets/images/background.jpg)">
+                                    <div class="cover__content">
+                                        <h1 class="cover__title">Lorem ipsum</h1>
+                                        <p class="cover__text lead"> Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Impedit minus eum voluptatem, corporis neque accusantium? </p>
+                                        <a href="#" class="button button--primary primary">Button</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slider -->
+                        <div id="slider" class="subsection">
+                            <h3 class="subsection__title">Slider</h3>
+                            <div class="subsection__content">
+                                <div class="splide">
+                                    <div class="splide__track">
+                                        <ul class="splide__list">
+                                            <li class="splide__slide">
+                                                <div class="cover filter"
+                                                     style="background-image: url(./assets/images/background.jpg)">
+                                                    <div class="cover__content">
+                                                        <h1 class="cover__title">Lorem ipsum 1</h1>
+                                                        <p class="cover__text lead"> Lorem ipsum dolor sit amet
+                                                            consectetur adipisicing elit. Impedit minus eum voluptatem,
+                                                            corporis neque accusantium? </p>
+                                                        <a href="#" class="button button--primary primary">Button</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <div class="cover filter"
+                                                     style="background-image: url(./assets/images/background.jpg)">
+                                                    <div class="cover__content">
+                                                        <h1 class="cover__title">Lorem ipsum 2</h1>
+                                                        <p class="cover__text lead"> Lorem ipsum dolor sit amet
+                                                            consectetur adipisicing elit. Impedit minus eum voluptatem,
+                                                            corporis neque accusantium? </p>
+                                                        <a href="#" class="button button--primary warning">Button</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <div class="cover filter"
+                                                     style="background-image: url(./assets/images/background.jpg)">
+                                                    <div class="cover__content">
+                                                        <h1 class="cover__title">Lorem ipsum 3</h1>
+                                                        <p class="cover__text lead"> Lorem ipsum dolor sit amet
+                                                            consectetur adipisicing elit. Impedit minus eum voluptatem,
+                                                            corporis neque accusantium? </p>
+                                                        <a href="#" class="button button--primary success">Button</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection__content">
+                                <div class="splide" data-splide='{"perPage": 3, "gap": "2rem", "breakpoints": { "992": {"perPage": 2},
+                                     "576": {"perPage": 1} }}'>
+                                    <div class="splide__track">
+                                        <ul class="splide__list">
+                                            <li class="splide__slide test">
+                                                <div class="card">
+                                                    <a href="#" class="card__image">
+                                                        <img src="./assets/images/background.jpg" alt="Card Image">
+                                                    </a>
+                                                    <div class="card__body">
+                                                        <h3 class="card__title">
+                                                            <a href="#" class="card__link">Lorem ipsum 1</a>
+                                                        </h3>
+                                                        <p class="card__text"> Lorem, ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Consequatur porro ullam quidem tenetur
+                                                            quae cupiditate libero impedit blanditiis, itaque ipsa. </p>
+                                                        <a href="#" class="button button--primary primary">Button</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <div class="card">
+                                                    <a href="#" class="card__image">
+                                                        <img src="./assets/images/background.jpg" alt="Card Image">
+                                                    </a>
+                                                    <div class="card__body">
+                                                        <h3 class="card__title">
+                                                            <a href="#" class="card__link">Lorem ipsum 2</a>
+                                                        </h3>
+                                                        <p class="card__text"> Lorem, ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Consequatur porro ullam quidem tenetur
+                                                            quae cupiditate libero impedit blanditiis, itaque ipsa. </p>
+                                                        <a href="#" class="button button--primary warning">Button</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <div class="card">
+                                                    <a href="#" class="card__image">
+                                                        <img src="./assets/images/background.jpg" alt="Card Image">
+                                                    </a>
+                                                    <div class="card__body">
+                                                        <h3 class="card__title">
+                                                            <a href="#" class="card__link">Lorem ipsum 3</a>
+                                                        </h3>
+                                                        <p class="card__text"> Lorem, ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Consequatur porro ullam quidem tenetur
+                                                            quae cupiditate libero impedit blanditiis, itaque ipsa. </p>
+                                                        <a href="#" class="button button--primary success">Button</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <div class="card">
+                                                    <a href="#" class="card__image">
+                                                        <img src="./assets/images/background.jpg" alt="Card Image">
+                                                    </a>
+                                                    <div class="card__body">
+                                                        <h3 class="card__title">
+                                                            <a href="#" class="card__link">Lorem ipsum 4</a>
+                                                        </h3>
+                                                        <p class="card__text"> Lorem, ipsum dolor sit amet consectetur
+                                                            adipisicing elit. Consequatur porro ullam quidem tenetur
+                                                            quae cupiditate libero impedit blanditiis, itaque ipsa. </p>
+                                                        <a href="#" class="button button--primary dark">Button</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Utilities -->
+                <section id="utilities" class="section">
+                    <div class="container">
+                        <h2 class="section__title">Utilities</h2>
+                        <p class="lead mt-3">Every utilities class has it's own variation for each breakpoint: <code
+                                  class="text-primary">{property}-{breakpoint}-{value}</code>.</p>
+                        <!-- Colors -->
+                        <div id="colors" class="subsection">
+                            <h3 class="subsection__title">Colors</h3>
+                            <div class="subsection__content">
+                                <p>
+                                    <span class="text-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="text-success">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="text-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="text-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                            </div>
+                            <h5 class="subsection__subtitle">Background colors</h5>
+                            <div class="subsection__content">
+                                <p>
+                                    <span class="bg-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="bg-success">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="bg-warning">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="bg-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="bg-info">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="bg-light">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="bg-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="bg-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                                <p>
+                                    <span class="bg-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Asperiores, officiis?</span>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Text alignment -->
+                        <div id="text-alignment" class="subsection">
+                            <h3 class="subsection__title">Text alignment</h3>
+                            <div class="subsection__content">
+                                <p class="text-left"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Asperiores, officiis?</p>
+                                <p class="text-center"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Asperiores, officiis?</p>
+                                <p class="text-right"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Asperiores, officiis?</p>
+                            </div>
+                        </div>
+                        <!-- Spacing -->
+                        <div id="spacing" class="subsection">
+                            <h3 class="subsection__title">Spacing</h3>
+                            <div class="subsection__content">
+                                <p> The classes are named using the format <code
+                                          class="text-primary">{property}{sides}-{breakpoint}-{size}</code>. </p>
+                                <p>Where <em>property</em> is one of:</p>
+                                <ul>
+                                    <li>
+                                        <code class="text-primary">m</code> - for classes that set <code
+                                              class="text-primary">margin</code>
+                                    </li>
+                                    <li>
+                                        <code class="text-primary">p</code> - for classes that set <code
+                                              class="text-primary">padding</code>
+                                    </li>
+                                </ul>
+                                <p>Where <em>sides</em> is one of:</p>
+                                <ul>
+                                    <li>
+                                        <code class="text-primary">t</code> - for classes that set <code
+                                              class="text-primary">margin-top</code> or <code
+                                              class="text-primary">padding-top</code>
+                                    </li>
+                                    <li>
+                                        <code class="text-primary">b</code> - for classes that set <code
+                                              class="text-primary">margin-bottom</code> or <code
+                                              class="text-primary">padding-bottom</code>
+                                    </li>
+                                    <li>
+                                        <code class="text-primary">l</code> - for classes that set <code
+                                              class="text-primary">margin-left</code> or <code
+                                              class="text-primary">padding-left</code>
+                                    </li>
+                                    <li>
+                                        <code class="text-primary">r</code> - for classes that set <code
+                                              class="text-primary">margin-right</code> or <code
+                                              class="text-primary">padding-right</code>
+                                    </li>
+                                    <li>
+                                        <code class="text-primary">x</code> - for classes that set both <code
+                                              class="text-primary">*-left</code> and <code
+                                              class="text-primary">*-right</code>
+                                    </li>
+                                    <li>
+                                        <code class="text-primary">y</code> - for classes that set both <code
+                                              class="text-primary">*-top</code> and <code
+                                              class="text-primary">*-bottom</code>
+                                    </li>
+                                    <li> blank - for classes that set a <code class="text-primary">margin</code> or
+                                        <code class="text-primary">padding</code> on all 4 sides of the element </li>
+                                </ul>
+                                <p>Where <em>size</em> is one of:</p>
+                                <ul>
+                                    <li>
+                                        <code class="text-primary">0</code> - for classes that eliminate the <code
+                                              class="text-primary">margin</code> or <code
+                                              class="text-primary">padding</code> by setting it to <code
+                                              class="text-primary">0</code>
+                                    </li>
+                                    <li>
+                                        <code class="text-primary">1</code> - for classes that set the <code
+                                              class="text-primary">margin</code> or <code
+                                              class="text-primary">padding</code> to <code class="text-primary">$spacer
+                                            * 0.25</code>
+                                    </li>
+                                    <li>
+                                        <code class="text-primary">2</code> - for classes that set the <code
+                                              class="text-primary">margin</code> or <code
+                                              class="text-primary">padding</code> to <code class="text-primary">$spacer
+                                            * 0.5</code>
+                                    </li>
+                                    <li>
+                                        <code class="text-primary">3</code> - for classes that set the <code
+                                              class="text-primary">margin</code> or <code
+                                              class="text-primary">padding</code> to <code
+                                              class="text-primary">$spacer</code>
+                                    </li>
+                                    <li>
+                                        <code class="text-primary">4</code> - for classes that set the <code
+                                              class="text-primary">margin</code> or <code
+                                              class="text-primary">padding</code> to <code class="text-primary">$spacer
+                                            * 1.5</code>
+                                    </li>
+                                    <li>
+                                        <code class="text-primary">5</code> - for classes that set the <code
+                                              class="text-primary">margin</code> or <code
+                                              class="text-primary">padding</code> to <code class="text-primary">$spacer
+                                            * 3</code>
+                                    </li>
+                                    <li>
+                                        <code class="text-primary">auto</code> - for classes that set the <code
+                                              class="text-primary">margin</code> to <code
+                                              class="text-primary">auto</code>
+                                    </li>
+                                </ul>
+                                <p>Where <em>breakpoint</em> is one of:</p>
+                                <ul>
+                                    <li>
+                                        <code class="text-primary">sm</code> - for <code
+                                              class="text-primary">576px</code> above</li>
+                                    <li>
+                                        <code class="text-primary">md</code> - for <code
+                                              class="text-primary">768px</code> above</li>
+                                    <li>
+                                        <code class="text-primary">lg</code> - for <code
+                                              class="text-primary">992px</code> above</li>
+                                    <li>
+                                        <code class="text-primary">xl</code> - for <code
+                                              class="text-primary">1200px</code> above </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Icons -->
+                <section id="icons" class="section">
+                    <div class="container">
+                        <h2 class="section__title">Icons</h2>
+                        <div class="subsection">
+                            <div class="section__content">
+                                <i class="icon-alert-triangle"></i>
+                                <i class="icon-arrow-down"></i>
+                                <i class="icon-arrow-down-left"></i>
+                                <i class="icon-arrow-down-right"></i>
+                                <i class="icon-arrow-left"></i>
+                                <i class="icon-arrow-right"></i>
+                                <i class="icon-arrow-up"></i>
+                                <i class="icon-arrow-up-left"></i>
+                                <i class="icon-arrow-up-right"></i>
+                                <i class="icon-award"></i>
+                                <i class="icon-calendar"></i>
+                                <i class="icon-check"></i>
+                                <i class="icon-chevron-down"></i>
+                                <i class="icon-chevron-left"></i>
+                                <i class="icon-chevron-right"></i>
+                                <i class="icon-chevrons-down"></i>
+                                <i class="icon-chevrons-left"></i>
+                                <i class="icon-chevrons-right"></i>
+                                <i class="icon-chevrons-up"></i>
+                                <i class="icon-chevron-up"></i>
+                                <i class="icon-clipboard"></i>
+                                <i class="icon-clock"></i>
+                                <i class="icon-compass"></i>
+                                <i class="icon-copy"></i>
+                                <i class="icon-corner-down-left"></i>
+                                <i class="icon-corner-down-right"></i>
+                                <i class="icon-corner-left-down"></i>
+                                <i class="icon-corner-left-up"></i>
+                                <i class="icon-corner-right-down"></i>
+                                <i class="icon-corner-right-up"></i>
+                                <i class="icon-corner-up-left"></i>
+                                <i class="icon-corner-up-right"></i>
+                                <i class="icon-download"></i>
+                                <i class="icon-download-cloud"></i>
+                                <i class="icon-edit"></i>
+                                <i class="icon-external-link"></i>
+                                <i class="icon-eye"></i>
+                                <i class="icon-eye-off"></i>
+                                <i class="icon-flag"></i>
+                                <i class="icon-grid"></i>
+                                <i class="icon-heart"></i>
+                                <i class="icon-home-1"></i>
+                                <i class="icon-home-2"></i>
+                                <i class="icon-home-3"></i>
+                                <i class="icon-info"></i>
+                                <i class="icon-link"></i>
+                                <i class="icon-loader"></i>
+                                <i class="icon-log-in"></i>
+                                <i class="icon-log-out"></i>
+                                <i class="icon-mail"></i>
+                                <i class="icon-map-pin"></i>
+                                <i class="icon-moon"></i>
+                                <i class="icon-pause"></i>
+                                <i class="icon-pause-circle"></i>
+                                <i class="icon-phone"></i>
+                                <i class="icon-play"></i>
+                                <i class="icon-play-circle"></i>
+                                <i class="icon-plus"></i>
+                                <i class="icon-search"></i>
+                                <i class="icon-settings"></i>
+                                <i class="icon-shopping-cart"></i>
+                                <i class="icon-sliders"></i>
+                                <i class="icon-star"></i>
+                                <i class="icon-sun"></i>
+                                <i class="icon-tag"></i>
+                                <i class="icon-thumbs-down"></i>
+                                <i class="icon-thumbs-up"></i>
+                                <i class="icon-trash"></i>
+                                <i class="icon-truck"></i>
+                                <i class="icon-upload"></i>
+                                <i class="icon-upload-cloud"></i>
+                                <i class="icon-user"></i>
+                                <i class="icon-users"></i>
+                                <i class="icon-x"></i>
+                            </div>
+                            <h5 class="subsection__subtitle">Social icons</h5>
+                            <div class="section__content">
+                                <i class="icon-apple"></i>
+                                <i class="icon-dribbble"></i>
+                                <i class="icon-facebook-1"></i>
+                                <i class="icon-facebook-2"></i>
+                                <i class="icon-github"></i>
+                                <i class="icon-google"></i>
+                                <i class="icon-instagram"></i>
+                                <i class="icon-linkedin-1"></i>
+                                <i class="icon-linkedin-2"></i>
+                                <i class="icon-messenger"></i>
+                                <i class="icon-pinterest"></i>
+                                <i class="icon-reddit"></i>
+                                <i class="icon-skype"></i>
+                                <i class="icon-snapchat"></i>
+                                <i class="icon-spotify"></i>
+                                <i class="icon-tiktok"></i>
+                                <i class="icon-twitch"></i>
+                                <i class="icon-twitter"></i>
+                                <i class="icon-whatsapp"></i>
+                                <i class="icon-youtube"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <!-- Footer navbar -->
+                    <nav class="footer__navbar">
+                        <ul class="navbar lv0">
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#" class="navbar__link lv0">
+                                    <span>Grid</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#columns-size" class="navbar__link lv1">
+                                            <span>Columns size</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#columns-responsiveness" class="navbar__link lv1">
+                                            <span>Columns responsiveness</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#columns-order" class="navbar__link lv1">
+                                            <span>Columns order</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#columns-offset" class="navbar__link lv1">
+                                            <span>Columns offset</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#nesting-columns" class="navbar__link lv1">
+                                            <span>Nesting columns</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#" class="navbar__link lv0">
+                                    <span>Typography</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#headings" class="navbar__link lv1">
+                                            <span>Headings</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#display" class="navbar__link lv1">
+                                            <span>Display</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#lead" class="navbar__link lv1">
+                                            <span>Lead</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#inline-text-elements" class="navbar__link lv1">
+                                            <span>Inline text elements</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#blockquotes" class="navbar__link lv1">
+                                            <span>Blockquotes</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#lists" class="navbar__link lv1">
+                                            <span>Lists</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#" class="navbar__link lv0">
+                                    <span>Content</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#images" class="navbar__link lv1">
+                                            <span>Images</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#tables" class="navbar__link lv1">
+                                            <span>Tables</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#buttons" class="navbar__link lv1">
+                                            <span>Buttons</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#forms" class="navbar__link lv1">
+                                            <span>Forms</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#" class="navbar__link lv0">
+                                    <span>Components</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#pagination" class="navbar__link lv1">
+                                            <span>Pagination</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#breadcrumb" class="navbar__link lv1">
+                                            <span>Breadcrumb</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#card" class="navbar__link lv1">
+                                            <span>Card</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#cover" class="navbar__link lv1">
+                                            <span>Cover</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#slider" class="navbar__link lv1">
+                                            <span>Slider</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0 is-parent">
+                                <a href="#" class="navbar__link lv0">
+                                    <span>Utilities</span>
+                                    <i class="navbar__toggle icon-chevron-down"></i>
+                                </a>
+                                <ul class="navbar lv1">
+                                    <li class="navbar__item lv1">
+                                        <a href="#colors" class="navbar__link lv1">
+                                            <span>Colors</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#text-alignment" class="navbar__link lv1">
+                                            <span>Text alignment</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__item lv1">
+                                        <a href="#spacing" class="navbar__link lv1">
+                                            <span>Spacing</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item lv0">
+                                <a href="#icons" class="navbar__link lv0">
+                                    <span>Icons</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Footer bottom -->
+                    <div class="footer__bottom">
+                        <!-- Footer copyright -->
+                        <div class="footer__copyright">
+                            <span> © 2009 Joel Friedlander | <a href="#">Privacy Policy</a> | <a href="#">Cookie
+                                    Policy</a></span>
+                        </div>
+                        <!-- Footer social -->
+                        <div class="footer__social">
+                            <a href="#" target="_blank" class="button button--icon">
+                                <i class="icon-facebook-2"></i>
+                            </a>
+                            <a href="#" target="_blank" class="button button--icon">
+                                <i class="icon-instagram"></i>
+                            </a>
+                            <a href="#" target="_blank" class="button button--icon">
+                                <i class="icon-linkedin-2"></i>
+                            </a>
+                            <a href="#" target="_blank" class="button button--icon">
+                                <i class="icon-twitter"></i>
+                            </a>
+                            <a href="#" target="_blank" class="button button--icon">
+                                <i class="icon-whatsapp"></i>
+                            </a>
+                            <a href="#" target="_blank" class="button button--icon">
+                                <i class="icon-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Script -->
+        <script src="./assets/js/app.min.js"></script>
+    </body>
+
+</html>

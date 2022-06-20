@@ -1,0 +1,36 @@
+// =====================================================
+//      Forms
+// =====================================================
+
+$input-types: ('text', 'number', 'email', 'password', 'checkbox', 'radio', 'search', 'tel', 'url') !default;
+$input-padding-y: $button-padding-y !default;
+$input-padding-x: $button-padding-x !default;
+$input-background-color: $gray-100 !default;
+$input-color: $base-color !default;
+$input-border: $button-border-width solid $gray-400 !default;
+$input-border-radius: $button-border-radius !default;
+$input-focus-border-color: $primary !default;
+$input-disabled-background-color: $gray-300 !default;
+$input-disabled-opacity: $button-disabled-opacity !default;
+
+$select-padding-right: 2.25rem !default;
+$select-background-image: svg-encode(
+    "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$input-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>"
+) !default;
+$select-background-size: 1rem 0.75rem !default;
+
+$checkbox-width: 1rem !default;
+$checkbox-height: 1rem !default;
+$checkbox-checked-background-color: $input-focus-border-color !default;
+$checkbox-checked-color: color-contrast($checkbox-checked-background-color) !default;
+$checkbox-checked-background-image: svg-encode(
+    "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$checkbox-checked-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>"
+) !default;
+
+$radio-width: $checkbox-width !default;
+$radio-height: $checkbox-height !default;
+$radio-checked-background-color: $checkbox-checked-background-color !default;
+$radio-checked-color: $checkbox-checked-color !default;
+$radio-checked-background-image: svg-encode(
+    "<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$radio-checked-color}'/></svg>"
+) !default;

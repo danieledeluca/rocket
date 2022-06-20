@@ -1,0 +1,87 @@
+// =====================================================
+//      Tables
+// =====================================================
+
+// Table
+//
+// 1. Collapse border spacing in all browsers (prevent double borders)
+// 2. Correct table border color inheritance in all Chrome, Edge, and Safari.
+
+table {
+    @include last-child-no-margin;
+    width: 100%;
+    border-collapse: collapse; // 1
+    border-color: inherit; // 2
+    caption-side: $table-caption-side;
+
+    > :not(:last-child) > :last-child > * {
+        @include mb-up(md) {
+            border-bottom-color: currentColor;
+        }
+    }
+}
+
+caption {
+    padding: $table-cell-padding 0;
+    color: $table-caption-color;
+    text-align: left;
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+    border: 0 solid inherit;
+}
+
+thead,
+tfoot {
+    @include mb-down(md) {
+        display: none;
+    }
+}
+
+tbody {
+    > :not(:last-child) > :last-child {
+        @include mb-down(md) {
+            border-bottom-color: currentColor;
+        }
+    }
+
+    td {
+        @include mb-down(md) {
+            display: block;
+        }
+
+        &::before {
+            @include mb-down(md) {
+                content: attr(data-th) ': ';
+                display: inline-block;
+                padding-right: 0.5rem;
+                font-weight: $font-weight-bold;
+            }
+        }
+    }
+}
+
+// Th
+//
+// 1. Matches default `<td>` alignment by inheriting `text-align`
+// 2. Fix alignment for Safari
+
+th {
+    text-align: inherit; // 1
+    text-align: -webkit-match-parent; // 2
+
+    &:not([align]) {
+        text-align: left;
+    }
+}
+
+th,
+td {
+    border-bottom: $table-border;
+    padding: $table-cell-padding;
+}

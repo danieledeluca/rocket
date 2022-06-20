@@ -1,0 +1,15 @@
+// =====================================================
+//      Container
+// =====================================================
+
+.container {
+    width: 100%;
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding-left: $container-gap;
+    padding-right: $container-gap;
+
+    &.container--full {
+        max-width: 100%;
+    }
+}

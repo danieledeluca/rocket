@@ -1,0 +1,24 @@
+// =====================================================
+//      Social
+// =====================================================
+
+$footer-social-font-size: 1.5rem !default;
+
+.footer__social {
+    @include mb-up(md) {
+        margin-right: -0.5rem;
+    }
+
+    @include mb-down(md) {
+        order: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .button {
+        font-size: $footer-social-font-size;
+
+        &:not(:last-child) {
+            margin-right: 0.25rem;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+// =====================================================
+//      Copyright
+// =====================================================
+
+$footer-copyright-font-size: 0.75rem !default;
+
+.footer__copyright {
+    font-size: $footer-copyright-font-size;
+
+    @include mb-down(md) {
+        order: 1;
+    }
+}

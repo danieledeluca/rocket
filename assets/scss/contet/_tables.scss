@@ -1,0 +1,13 @@
+// =====================================================
+//      Tables
+// =====================================================
+
+table {
+    &.table--stripped {
+        tbody {
+            tr:nth-of-type(odd) {
+                background-color: $table-stripped-background-color;
+            }
+        }
+    }
+}

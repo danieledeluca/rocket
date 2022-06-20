@@ -1,0 +1,22 @@
+// =====================================================
+//      Display
+// =====================================================
+
+%display {
+    margin-top: 0;
+    margin-bottom: $display-margin-bottom;
+    font-family: $display-font-family;
+    font-weight: $display-font-weight;
+    line-height: $display-line-height;
+}
+
+@each $display, $value in $display-font-sizes {
+    .#{$display} {
+        @extend %display;
+        font-size: $value;
+
+        @include mb-down(md) {
+            font-size: div($value, 1.5);
+        }
+    }
+}

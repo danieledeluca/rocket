@@ -1,0 +1,44 @@
+// =====================================================
+//      Card
+// =====================================================
+
+$card-background-color: $white !default;
+$card-color: color-contrast($card-background-color) !default;
+$card-border-radius: $base-border-radius !default;
+$card-box-shadow: 0 0 20px $base-box-shadow-color !default;
+$card-image-height: 300px !default;
+$card-image-height-md: 200px !default;
+$card-body-padding: 1.25rem !default;
+
+.card {
+    position: relative;
+    display: block;
+    margin-bottom: 2rem;
+    background-color: $card-background-color;
+    color: $card-color;
+    border-radius: $card-border-radius;
+    box-shadow: $card-box-shadow;
+
+    &[href],
+    [href]:not(.button) {
+        color: $card-color;
+        text-decoration: none;
+    }
+}
+
+.card__image {
+    img {
+        width: 100%;
+        height: $card-image-height;
+        object-fit: cover;
+        border-radius: $card-border-radius $card-border-radius 0 0;
+
+        @include mb-down(md) {
+            height: $card-image-height-md;
+        }
+    }
+}
+
+.card__body {
+    padding: $card-body-padding;
+}

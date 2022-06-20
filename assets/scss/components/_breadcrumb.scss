@@ -1,0 +1,34 @@
+// =====================================================
+//      Breadcrumb
+// =====================================================
+
+$breadcrumb-color: $base-color !default;
+$breadcrumb-font-size: $small-font-size !default;
+$breadcrumb-separator: 'chevron-right' !default;
+$breadcrumb-link-font-weight: $font-weight-semi-bold !default;
+
+.breadcrumb__list {
+    @include reset-list;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: $breadcrumb-font-size;
+}
+
+.breadcrumb__item {
+    &:not(:last-child) {
+        &::after {
+            @include icon($breadcrumb-separator);
+            margin-right: 0.25rem;
+            vertical-align: middle;
+        }
+    }
+}
+
+.breadcrumb__link {
+    @include reset-link($breadcrumb-color);
+
+    &[href] {
+        font-weight: $breadcrumb-link-font-weight;
+    }
+}

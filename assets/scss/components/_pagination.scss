@@ -1,0 +1,52 @@
+// =====================================================
+//      Pagination
+// =====================================================
+
+$pagination-width: 2rem !default;
+$pagination-height: $pagination-width !default;
+$pagination-margin: 0.5rem !default;
+$pagination-padding: 0.5rem !default;
+$pagination-background-color: $white !default;
+$pagination-color: color-contrast($pagination-background-color) !default;
+$pagination-border-radius: $base-border-radius !default;
+$pagination-box-shadow: 0 0 10px $base-box-shadow-color !default;
+$pagination-font-size: $small-font-size !default;
+$pagination-hover-background-color: $primary !default;
+$pagination-hover-color: color-contrast($pagination-hover-background-color) !default;
+
+.pagination__list {
+    @include reset-list;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: -#{$pagination-margin};
+}
+
+.pagination__item {
+    margin-bottom: $pagination-margin;
+
+    &:not(:last-child) {
+        margin-right: $pagination-margin;
+    }
+}
+
+.pagination__link {
+    @include reset-link;
+    @include transition(background-color, color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: $pagination-width;
+    height: $pagination-height;
+    padding: $pagination-padding;
+    background-color: $pagination-background-color;
+    border-radius: $pagination-border-radius;
+    box-shadow: $pagination-box-shadow;
+    font-size: $pagination-font-size;
+
+    &:hover,
+    .pagination__item.is-active & {
+        background-color: $pagination-hover-background-color;
+        color: $pagination-hover-color;
+    }
+}

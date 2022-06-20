@@ -1,0 +1,31 @@
+// =====================================================
+//      Colors
+// =====================================================
+
+@each $color, $value in $theme-colors {
+    // Text color
+    .text-#{$color} {
+        color: $value !important;
+    }
+
+    // Background color
+    .bg-#{$color} {
+        background-color: $value !important;
+        color: color-contrast($value);
+    }
+
+    @each $breakpoint, $breakpoint-value in $breakpoints {
+        @include mb-up($breakpoint) {
+            // Text color
+            .text-#{$breakpoint}-#{$color} {
+                color: $value !important;
+            }
+
+            // Background color
+            .bg-#{$breakpoint}-#{$color} {
+                background-color: $value !important;
+                color: color-contrast($value);
+            }
+        }
+    }
+}

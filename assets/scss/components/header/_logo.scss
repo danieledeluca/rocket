@@ -1,0 +1,21 @@
+// =====================================================
+//      Logo
+// =====================================================
+
+$header-logo-margin-right: 1.25rem !default;
+$header-logo-height: 40px !default;
+
+.header__logo {
+    display: inline-block;
+    margin-right: $header-logo-margin-right;
+    padding: $container-gap;
+
+    @include mb-up(md) {
+        padding: 1rem 0;
+    }
+
+    .logo {
+        display: block;
+        height: $header-logo-height;
+    }
+}
