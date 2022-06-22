@@ -1,9 +1,8 @@
-<p align="center">
-    <img src="./assets/images/logo/favicon.ico" alt="Rocket logo" width="150">
-</p>
-
-
 # Rocket
+![Hero image for Rocket framework](assets/images/readme-background.jpg)
+
+
+## About
 
 A lightweight HTML, CSS, and JavaScript framework.
 
@@ -13,6 +12,7 @@ A lightweight HTML, CSS, and JavaScript framework.
 * Lightweight CSS file (**83,1 KB**)
 * Minimal JavaScript (**125 byte**)
 * Prebuild components
+* Icons font based on [Feathericons](https://feathericons.com/)
 
 
 ## Prebuild components
@@ -31,17 +31,13 @@ The framework came already with some prebuild components like:
 ### CSS
 
 ```html
-<head>
-    <link rel="stylesheet" href="assets/css/style.min.css">
-</head>
+<link rel="stylesheet" href="assets/css/style.min.css">
 ```
 
 ### JavaScript
 
 ```html
-<body>
-    <script src="assets/js/app.min.js"></script>
-</body>
+<script src="assets/js/app.min.js"></script>
 ```
 
 ### Start the server
